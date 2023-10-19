@@ -29,7 +29,7 @@ function handlerClick(event) {
     const currentImage = event.target.closest('.js-item')
     // console.dir(currentImage);
     if (currentImage) {
-        const currentImageSrc = currentImage.querySelector('img').getAttribute('src');
+        const currentImageSrc = currentImage.querySelector('img').getAttribute('data-source');
         const currentImageAlt = currentImage.querySelector('img').getAttribute('alt');
 
         const instance = basicLightbox.create(`
@@ -45,6 +45,7 @@ function handlerClick(event) {
         });
     }
 }
+
 
 
 
